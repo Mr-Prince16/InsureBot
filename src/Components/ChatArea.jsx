@@ -53,7 +53,7 @@ const ChatArea = () => {
       <div
         ref={chatContainerRef}
         className="flex-1 overflow-y-scroll no-scrollbar px-6 py-4"
-        style={{ paddingBottom: showScrollButton ? '3rem' : '0' }} // Adjust padding if scroll button is visible
+        style={{ paddingBottom: showScrollButton ? '3rem' : '0' }} 
       >
         {messages.map(message => (
           <div key={message.id} className={`mb-4 ${message.sender === "user" ? 'flex justify-end' : 'flex justify-start'}`}>
@@ -73,6 +73,7 @@ const ChatArea = () => {
           <FaArrowDown className="w-6 h-6" /> {/* Down arrow icon */}
         </button>
       )}
+      {/* Chat Input Section */}
       <div className="flex items-center justify-between bg-white border-t border-gray-200 px-4 py-2">
         <input
           type="text"
